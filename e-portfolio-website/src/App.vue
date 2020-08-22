@@ -1,55 +1,101 @@
 <template>
   <v-app>
-    <v-app-bar class="navbar" elevation="5" color="black" floating>
-      <v-toolbar-title>
-        <button v-on:click="$router.push('/')">+</button>
-      </v-toolbar-title>
-      <v-toolbar-items>
-        <NavBar/>
-      </v-toolbar-items>
-    </v-app-bar>
     <v-content class="content">
+      <v-speed-dial class="floatingNav" open-on-hover transition="slide-x-transition" direction="right">
+        <template v-slot:activator>
+          <button v-on:click="$router.push('/'), updateNavColour('home')">+</button>
+        </template>
+        <button class="navButton" v-on:click="updateNavColour('about')">
+          <router-link exact to="/aboutme" v-bind:style="this.navColour">About</router-link>
+        </button>
+        <v-divider/>
+        <button class="navButton" v-on:click="updateNavColour('work')">
+          <router-link exact to="/workexperience" v-bind:style="this.navColour">Work Experience</router-link>
+        </button>
+        <v-divider/>
+        <button class="navButton" v-on:click="updateNavColour('project')">
+          <router-link exact to="/projects" v-bind:style="this.navColour">Projects</router-link>
+        </button>
+      </v-speed-dial>
       <router-view/>
-      <v-footer class="font-weight-medium" elevation="10" color="black">
-        <v-divider></v-divider>
-        <v-col cols="12" class="footerText">
-          Copyright © {{ new Date().getFullYear() }}<strong> Justin Lyn, All rights reserved.</strong>
-        </v-col>
+      <v-footer class="font-weight-medium" style="justify-content: center" elevation="9" color="#6495ed">
+        <v-row class="footerBar">
+          <v-row>
+            <v-col class="footerText" cols="10">
+              <strong>Copyright © {{ new Date().getFullYear() }} by Justin Lyn</strong>
+            </v-col>
+          </v-row>
+          <v-col cols="2" style="text-align: right">
+            <a class="connectIcon" href='https://www.linkedin.com/in/justin-lyn-b9626114b/' target="_blank"> <font-awesome-icon :icon="['fab', 'linkedin-in']" size="2x"/></a>
+            <a class="connectIcon" href='https://www.facebook.com/Justinlyn387' target="_blank"><font-awesome-icon :icon="['fab', 'facebook-square']" size="2x"/></a>
+            <a class="connectIcon" href='https://github.com/JustinLyn387' target="_blank"><font-awesome-icon :icon="['fab', 'github']" size="2x"/></a>
+          </v-col>
+        </v-row>
       </v-footer>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import NavBar from './components/NavBar'
 
 export default {
   name: 'App',
-  components: { NavBar },
+  components: { },
   data: () => ({
-    //
-  })
+    navColour: 'color: whitesmoke'
+  }),
+  methods: {
+    updateNavColour (page) {
+      if (page === 'home') {
+        this.navColour = 'color: whitesmoke'
+      } else {
+        this.navColour = 'color: cornflowerblue'
+      }
+    }
+  }
 }
 </script>
 
 <style scoped>
   button{
     text-align: center;
-    color: cornflowerblue;
-    font-size: 45px;
+    color: rgb(255, 156, 56 );
+    font-size: 65px;
     font-weight: bold;
     border: none;
     outline: none;
     padding-left: 10px;
   }
-  .navbar{
-    max-height: 65px;
+  .navButton{
+    font-size: 24px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+    padding-left: 75px;
+  }
+  .v-application a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  .floatingNav{
+    position: absolute;
+    margin: 15px 0 0 35px;
   }
   .content{
-    background: black;
+    background: whitesmoke;
+  }
+  .footerBar {
+    max-width: 1800px;
   }
   .footerText{
     color: whitesmoke;
+    padding-left: 20px;
+  }
+  .connectIcon{
+    color: whitesmoke;
+    margin-right: 20px;
+    justify-content: right;
+    text-align: right;
   }
 
 </style>

@@ -14,7 +14,7 @@
     </section>
     <v-row>
       <h1>Justin? WHO?</h1>
-      <h1 class="subText">Hey there! Welcome to my website where<br> you can find out a little bit more about who I am...</h1>
+      <h1 class="subText">Hey there! Welcome to my website where<br> you can find out a little bit more about who I am ...</h1>
     </v-row>
   </v-container>
 </template>
@@ -39,13 +39,13 @@ export default {
     tl.add({
       targets: 'section div',
       width: '100%',
-      backgroundColor: 'rgb(100,149,237)',
+      backgroundColor: 'rgb(255, 156, 56 )',
       delay: anime.stagger(100) // increase delay by 100ms for each elements.
     })
       .add({
         targets: 'section div',
         width: '90%',
-        backgroundColor: 'rgb(100, 149, 237)'
+        backgroundColor: 'rgb(255, 156, 56 )'
       })
       .add({
         targets: 'h1',
@@ -73,8 +73,9 @@ export default {
     padding: 0;
     min-width: 100%;
     overflow-y: hidden;
+    overflow-x: hidden;
     max-height: 100vh;
-    background-color: black;
+    background-color: cornflowerblue;
   }
   section {
     display: grid;

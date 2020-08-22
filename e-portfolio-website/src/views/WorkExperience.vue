@@ -1,8 +1,12 @@
 <template>
   <v-container class="experienceContainer">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <v-row>
+      <h2 class="headingText">Work Experience ~</h2>
+    </v-row>
     <v-row>
       <v-col>
-        <v-card elevation="10" shaped class="timelineCard" color="black">
+        <v-card elevation="10" shaped class="timelineCard">
           <v-timeline light>
             <!-- Use a loop to create the timeline -->
             <v-timeline-item color="primary" small>
@@ -17,7 +21,7 @@
                 </v-row>
               </template>
               <div class="py-4">
-                <h2 :class="`headline font-weight-bold mb-4 primary--text`">Software Developer</h2>
+                <h2 :class="`headline font-weight-bold mb-4 blue--text`">Software Developer</h2>
                 <h3 :class="`font-weight-bold mb-4 $primary--text`">SS&C Technologies, Toronto, Ontario</h3>
                 <div>
                   • Daily interaction with SSMS, SSRS, and SSIS to view, manage, and modify company information<br>
@@ -131,20 +135,24 @@ export default {
 
 <style scoped>
   h2, h3, span, div {
-    color: whitesmoke;
+    color: black;
   }
   div{
     font-size: 18px;
   }
+  .headingText{
+    font-family: 'Caveat', cursive;
+    font-size: 47px;
+    font-weight: lighter;
+  }
   .experienceContainer{
-    padding: 30px 10% 20px 10%;
-    max-width: 1750px;
+    padding: 120px 10% 20px 10%;
+    max-width: 2000px;
     height: 100%;
-    background: black;
   }
   .timelineCard{
+    margin: 50px 20px 0 20px;
     padding: 30px 75px 30px 75px;
-    background-color: black;
   }
   .workYears{
     display: flex;
