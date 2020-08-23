@@ -87,16 +87,16 @@ export default {
     z-index: 5;
   }
   h1 {
-    margin-top: 9%;
+    margin-top: 15%;
     font-size: 7em;
     position: absolute;
-    left: 12%;
+    left: 10%;
     opacity: 0;
     z-index: 2;
     color: whitesmoke;
   }
   .subText{
-    margin-top: 20.5%;
+    margin-top: 26.5%;
     position: absolute;
     color: whitesmoke;
     font-weight: bold;
