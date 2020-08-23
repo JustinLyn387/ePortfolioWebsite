@@ -89,7 +89,7 @@ export default {
   }
   .footerText{
     color: whitesmoke;
-    padding-left: 20px;
+    padding: 17px 0 0 20px;
   }
   .connectIcon{
     color: whitesmoke;

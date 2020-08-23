@@ -12,9 +12,11 @@
       <div></div>
       <div></div>
     </section>
-    <v-row>
-      <h1>Justin? WHO?</h1>
-      <h1 class="subText">Hey there! Welcome to my website where<br> you can find out a little bit more about who I am ...</h1>
+    <v-row class="homeText">
+      <v-col class="py-0 homeColumn">
+        <h1 style="font-size: 7em">Justin? WHO?</h1>
+        <h2>Hey there! Welcome to my website where<br> you can find out a little bit more about who I am ...</h2>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -48,7 +50,7 @@ export default {
         backgroundColor: 'rgb(255, 156, 56 )'
       })
       .add({
-        targets: 'h1',
+        targets: '.homeText',
         top: '20%',
         opacity: 1,
         duration: 4000
@@ -86,22 +88,17 @@ export default {
     transition: background-color 1s;
     z-index: 5;
   }
-  h1 {
+  .homeText {
+    max-height: 30vh;
     margin-top: 15%;
-    font-size: 7em;
     position: absolute;
     left: 10%;
     opacity: 0;
     z-index: 2;
     color: whitesmoke;
   }
-  .subText{
-    margin-top: 26.5%;
-    position: absolute;
-    color: whitesmoke;
-    font-weight: bold;
-    font-size: 24px;
-    z-index: 2;
+  .homeColumn{
+    height: auto;
   }
 
 </style>
