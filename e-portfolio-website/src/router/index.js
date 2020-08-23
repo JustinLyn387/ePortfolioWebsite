@@ -12,16 +12,10 @@ const routes = [
     meta: { title: 'ePortfolio | Justin? WHO?' }
   },
   {
-    path: '/aboutme',
+    path: '/about',
     name: 'About',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
-    meta: { title: 'About Me | Justin? WHO?' }
-  },
-  {
-    path: '/education',
-    name: 'Education',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Education.vue'),
-    meta: { title: 'Education | Justin? WHO?' }
+    meta: { title: 'About | Justin? WHO?' }
   },
   {
     path: '/workexperience',
@@ -34,12 +28,6 @@ const routes = [
     name: 'Projects',
     component: () => import(/* webpackChunkName: "about" */ '../views/Projects.vue'),
     meta: { title: 'Projects | Justin? WHO?' }
-  },
-  {
-    path: '/connect',
-    name: 'Connect',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Connect.vue'),
-    meta: { title: 'Connect | Justin? WHO?' }
   }
 ]
 

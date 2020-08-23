@@ -81,7 +81,7 @@ export default {
   .projectsContainer{
     max-width: 1900px;
     height: 100%;
-    padding: 110px 5% 30px 5%;
+    padding: 110px 8% 20px 8%;
   }
   .projectGallery{
     min-width: 100%;
@@ -90,7 +90,7 @@ export default {
     height: 75vh;
     width: 372px;
     padding: 25px;
-    margin: 15px 15px;
+    margin: 15px 30px 15px 0;
     overflow-y: scroll;
   }
   .projectInfo{
@@ -99,8 +99,4 @@ export default {
   .projImage{
     height: 30vh;
   }
-  h2 {
-    text-align: center;
-  }
-
 </style>

@@ -4,7 +4,7 @@
     <v-row>
       <h2>About ~</h2>
     </v-row>
-    <v-row class="mt-12">
+    <v-row class="mt-10">
       <v-col cols="4">
         <vue-diagonal :deg="3" background="orange" class="picBack2"/>
         <vue-diagonal :deg="-4" background="#6495ed" class="picBack1">
@@ -26,11 +26,11 @@
           Over the past few years, I’ve been able to gain hands on work experience with companies operating in Ontario,
           and have been lucky enough to experience both the hardware and software side of computer science. Currently,
           I am working as a software developer at SS&C Technologies and have been able
-          to gain in depth knowledge on how companies maintain and manage data having worked extensively with SQL servers
-          , and both integration and reporting services.<br><br>
+          to gain in depth knowledge on how companies maintain and manage data having worked extensively with SQL servers,
+          and both integration and reporting services.<br><br>
           In the future, I plan to continue pursuing a career in the software world of computer science, striving for
           opportunities where I can design, create, and explore the various ways to provide information and services to the world. </p>
-        <v-btn depressed ripple color="orange" style="margin-left: 30px; padding: 0 20px 0 20px" class="mt-4" v-on:click="openResume">resume</v-btn>
+        <v-btn color="orange" text x-large style="margin-left: 8px; font-weight: bold" class="mt-1" href="/Resume.pdf" target="_blank">view my resume</v-btn>
       </v-col>
     </v-row>
     <v-divider class="mt-12"/>
@@ -42,7 +42,7 @@
             <v-img class="slideItem" :src="picture.src">
               <v-fade-transition>
                 <v-overlay v-if="hover" absolute color="black">
-                  <p>{{ picture.text }}</p>
+                  <p style="padding-bottom: 20px">{{ picture.text }}</p>
                 </v-overlay>
               </v-fade-transition>
             </v-img>
@@ -93,12 +93,6 @@ export default {
         }
       ]
     }
-  },
-  methods: {
-    openResume () {
-      const pdf = '/Resume.pdf'
-      window.open(pdf, '_blank')
-    }
   }
 }
 </script>
@@ -108,7 +102,7 @@ export default {
     padding-left: 30px;
   }
   p{
-    font-size: 18px;
+    font-size: 1.2em;
     padding: 50px 30px 0 30px;
   }
   h2{
@@ -137,7 +131,7 @@ export default {
   .slideItem{
     height: 250px;
     width: 250px;
-    margin: 20px 20px;
+    margin: 20px 40px 20px 0;
   }
   img {
     max-width: 100%;

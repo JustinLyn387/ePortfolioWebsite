@@ -4,7 +4,7 @@
     <v-row>
       <h2 class="headingText">Work Experience ~</h2>
     </v-row>
-    <v-row>
+    <v-row class="mt-10">
       <v-col>
         <v-card elevation="10" shaped class="timelineCard">
           <v-timeline light>
@@ -146,13 +146,12 @@ export default {
     font-weight: lighter;
   }
   .experienceContainer{
-    padding: 120px 10% 20px 10%;
-    max-width: 2000px;
+    padding: 110px 8% 20px 8%;
+    max-width: 1900px;
     height: 100%;
   }
   .timelineCard{
-    margin: 50px 20px 0 20px;
-    padding: 30px 75px 30px 75px;
+    padding: 20px 75px 20px 75px;
   }
   .workYears{
     display: flex;

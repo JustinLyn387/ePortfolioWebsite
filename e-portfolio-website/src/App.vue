@@ -3,17 +3,17 @@
     <v-content class="content">
       <v-speed-dial class="floatingNav" open-on-hover transition="slide-x-transition" direction="right">
         <template v-slot:activator>
-          <button v-on:click="$router.push('/'), updateNavColour('home')">+</button>
+          <button v-on:click="$router.push('/')">+</button>
         </template>
-        <button class="navButton" v-on:click="updateNavColour('about')">
-          <router-link exact to="/aboutme" v-bind:style="this.navColour">About</router-link>
+        <button class="navButton">
+          <router-link exact to="/about" v-bind:style="this.navColour">About</router-link>
         </button>
         <v-divider/>
-        <button class="navButton" v-on:click="updateNavColour('work')">
+        <button class="navButton">
           <router-link exact to="/workexperience" v-bind:style="this.navColour">Work Experience</router-link>
         </button>
         <v-divider/>
-        <button class="navButton" v-on:click="updateNavColour('project')">
+        <button class="navButton">
           <router-link exact to="/projects" v-bind:style="this.navColour">Projects</router-link>
         </button>
       </v-speed-dial>
@@ -44,9 +44,9 @@ export default {
   data: () => ({
     navColour: 'color: whitesmoke'
   }),
-  methods: {
-    updateNavColour (page) {
-      if (page === 'home') {
+  watch: {
+    $route (to, from) {
+      if (to.name === 'Home') {
         this.navColour = 'color: whitesmoke'
       } else {
         this.navColour = 'color: cornflowerblue'
